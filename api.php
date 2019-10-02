@@ -5,8 +5,12 @@ error_log('in api.php');
 require 'vendor/autoload.php';
 
 function getDB(){
-	//file path to json file
-	$dbpath = 'private/database.json';
+	$dbhost="notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com";
+    $dbuser="admin";
+    $dbpass="cpsc4910";
+    $dbname="test";
+    $dbpath = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);  
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	//load it
 	$db = file_get_contents($dbpath);
@@ -21,8 +25,12 @@ function getDB(){
 }
 
 function writeDB($db){
-	//file path to json file
-	$dbpath = 'private/database.json';
+	$dbhost="notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com";
+    $dbuser="admin";
+    $dbpass="cpsc4910";
+    $dbname="test";
+    $dbpath = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);  
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	//write it
 	file_put_contents($dbpath, json_encode($db));
