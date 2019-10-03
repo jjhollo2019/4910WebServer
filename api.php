@@ -157,7 +157,7 @@ $app->post('/auth', function (Request $request, Response $response, array $args)
 		return $response->withRedirect('index.php', 302);
 	} else {
 		session_destroy();
-		return $response->withRedirect('login.html#'.$result, 302);
+		return $response->withRedirect('index.html#'.$result, 302);
 	}
 
 });
