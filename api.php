@@ -8,8 +8,8 @@ function getDB(){
     $dbhost="notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com";
     $dbuser="admin";
     $dbpass="cpsc4910";
-    $dbname="test";
-    $dbpath = new PDO("mysql:host="$dbhost";dbname="$dbname, $dbuser, $dbpass);  
+	$dbname="test";
+    $dbpath = new PDO("mysql:host=notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com;dbname=test", $dbuser, $dbpass);  
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	//load it
