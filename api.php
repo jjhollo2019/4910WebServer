@@ -5,11 +5,11 @@ error_log('in api.php');
 require 'vendor/autoload.php';
 
 function getDB(){
-	$dbhost="notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com";
+    $dbhost="notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com";
     $dbuser="admin";
     $dbpass="cpsc4910";
     $dbname="test";
-    $dbpath = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);  
+    $dbpath = new PDO("mysql:host="$dbhost";dbname="$dbname, $dbuser, $dbpass);  
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	//load it
@@ -25,7 +25,7 @@ function getDB(){
 }
 
 function writeDB($db){
-	$dbhost="notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com";
+    $dbhost="notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com";
     $dbuser="admin";
     $dbpass="cpsc4910";
     $dbname="test";
