@@ -154,10 +154,10 @@ $app->post('/auth', function (Request $request, Response $response, array $args)
 		$_SESSION['username'] = $_POST['username'];
 		$_SESSION['name'] = getUser($_SESSION['username'])['name'];
 
-		return $response->withRedirect('index.php', 302);
+		return $response->withRedirect('/4910WebServer/index.php', 302);
 	} else {
 		session_destroy();
-		return $response->withRedirect('index.html#'.$result, 302);
+		return $response->withRedirect('/4910WebServer/index.html#'.$result, 302);
 	}
 
 });
